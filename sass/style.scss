@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&family=Raleway&family=Rubik:ital@1&display=swap');
+/* Sass Template */
+@import'./include/variables.scss';
+@import'./include/global.scss';
+@import'./include/typography.scss';
+@import'./include/color.scss';
+@import'./include/top-sale.scss';
+
+#btn{
+    display: flex;
+}
+#col1{
+    margin-right: 30px;
+}
+#product-description{
+    margin-top: 50px;;
+}
