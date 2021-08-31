@@ -1,9 +1,14 @@
+<?php
+    $phone_id = $_GET['phone_id']??1;
+    foreach($product->getData() as $item):
+        if($item['phone_id'] == $phone_id):
+?>
 <!--Product-->
-<section id="product" class="py-3">
+    <section id="product" class="py-3">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-6">
-                            <img src="./img/top-sale/iphone12.jpg" alt="iphone12" class="img-fluid">
+                            <img src="<?php echo $item['item_image']?>" alt="iphone12" class="img-fluid">
                             <div id="btn" class="form-row pt-4 font-size-16 font-baloo">
                                 <div id="col1" class="col">
                                     <button type="submit" class="btn btn-danger form-control">Nastavi kupovinu</button>
@@ -14,8 +19,8 @@
                             </div>
                         </div>
                         <div class="col-sm-6 py-5">
-                            <h5 class="font-baloo font-size-20">Apple iPhone 12</h5>
-                            <small>by Apple</small>
+                            <h5 class="font-baloo font-size-20"><?php echo $item['model']?></h5>
+                            <small><?php echo $item['brand_id']?></small>
                             <div class="d-flex">
                                 <div class="rating text-warning font-size-12">
                                     <span class="fas fa-trophy"></span>
@@ -30,11 +35,11 @@
                             <table class="my-3">
                                 <tr class="font-rale font-size-14">
                                     <td>P.C.</td>
-                                    <td class="font-size-16"><strike>899$</strike></td>
+                                    <td class="font-size-16"><strike><?php echo ($item['price']+100)?>$</strike></td>
                                 </tr>
                                 <tr class="font-rale font-size-14">
                                     <td>Cena:</td>
-                                    <td class="font-size-20 text-danger">799$</td>
+                                    <td class="font-size-20 text-danger"><?php echo $item['price']?></td>
                                 </tr>
                                 <tr class="font-rale font-size-14">
                                     <td>Usteda:</td>
@@ -94,3 +99,10 @@
                     </div>
                 </div>
             </section>
+
+
+
+<?php
+    endif;
+    endforeach;
+?>            
