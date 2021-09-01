@@ -1,5 +1,13 @@
 <?php
     $best_phone = $product->getData();
+    
+    // request method post
+    if($_SERVER['REQUEST_METHOD'] == "POST"){
+        if (isset($_POST['top_sale_submit'])){
+            // call method addToCart
+            $Card->addToCard($_POST['user_id'], $_POST['phone_id']);
+        }
+    }
 ?>
             <!--TopSale-->
             <section id="top-sale">
@@ -23,7 +31,11 @@
                                     <div class="price py-2">
                                         <span><?php echo $item['price'] ?? '0';?></span>
                                     </div>
-                                    <button type="submit" class="btn btn-warning font-size-12">Dodaj u korpu!</button>
+                                    <form method="post">
+                                        <input type="hidden" name="phone_id" value="<?php echo $item['phone_id'] ?? '1'; ?>">
+                                        <input type="hidden" name="user_id" value="<?php echo 1; ?>">
+                                        <button type="submit" name="top_sale_submit" class="btn btn-warning font-size-12">Dodaj u korpu!</button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
