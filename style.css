@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&family=Raleway&family=Rubik:ital@1&display=swap");
 /* Sass Template */
 /*Global classes*/
-button, button:focus {
+button,
+button:focus {
   outline: none !important;
   box-shadow: none !important;
 }
@@ -104,10 +105,6 @@ button, button:focus {
 
 #product-description {
   margin-top: 50px;
-}
-
-#card{
-   margin-left: 200px;
 }
 
 /*# sourceMappingURL=style.css.map */

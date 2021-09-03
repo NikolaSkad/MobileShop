@@ -50,6 +50,26 @@ class Card
         }
     }
 
+    public function deleteCard($item_id = null, $table="card")
+    {
+        if($item_id != null){
+            $result = $this->db->con->query("DELETE FROM {$table} WHERE phone_id={$item_id}");
+            if($result){
+                header("Location: " .$_SERVER['PHP_SELF']);
+            }//ako dobijemo result neki onda pozivamo ovu fju
+        }
+    }
+
+    public function getSum($arr){
+        if(isset($arr)){
+            $sum = 0;
+            foreach($arr as $item){
+                $sum += floatval($item[0]);//ovom funkcijom dobijamo float vrednost item-a
+            }
+            return sprintf($sum);
+        }
+    }
+
 }
 
 ?>
