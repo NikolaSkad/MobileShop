@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,26 +36,23 @@
         <header id="header">
             <div class="strip d-flex justify-content-between px-4 py-1 bg-light">
                 <p class="font-rale font-size-20 text-black-50 m-0">Nikola Skadric 265/18</p>
-                <div class="font-rale font-size-14">
+                <!--<div class="font-rale font-size-14">
 				    <a href="#" class="px-3 border-right border-left text-dark">Log In/Sign In</a>
-                <div>
+                <div>-->
             </div>
 
         </header>
         <!--end Header-->
         <!-- BS navbar -->
             <nav class="navbar navbar-expand-lg navbar-light navbar-dark color-second-bg">
-                <a class="navbar-brand" href="#">Mobile Shop</a>
+                <a class="navbar-brand" href="index.php">Mobile Shop</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav m-auto font-rubik">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Rasprodaja</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Kategorije</a>
+                        <a class="nav-link" href="index.php">Pocetna</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="#">Proizvodjaci</a>
@@ -62,6 +63,16 @@
                       <li class="nav-item">
                         <a class="nav-link" href="#">O nama</a>
                       </li>
+                      <?php
+                      
+                      if (isset($_SESSION["useruid"])) {
+                        echo '<li class="nav-item"><a class="nav-link" href="logout.php">Odjavi se</a></li>';
+                      }
+                      else {
+                        echo '<li class="nav-item"><a class="nav-link" href="login.php">Prijavi se</a></li>';
+                        echo '<li class="nav-item"><a class="nav-link" href="signup.php">Registruj se</a></li>';
+                      }
+                      ?>
                 </ul>
                 <form action="#" class="font-size-14 font-rale">
                     <a href="./card.php" class="py-2 rounded-pill color-primary-bg">
