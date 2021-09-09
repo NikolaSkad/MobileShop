@@ -58,7 +58,7 @@
                         <a class="nav-link" href="./brands.php">Proizvodjaci</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#">Kontakt</a>
+                        <a class="nav-link" href="contact.php">Kontakt</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="aboutus.php">O nama</a>

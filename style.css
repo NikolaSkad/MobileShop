@@ -53,13 +53,14 @@ button:focus {
   background: #baaba6;
 }
 
-.color-yellow {
-  color: #ffd289;
+.color-white {
+  color: rgb(255, 255, 255);
 }
 
 .color-yellow-bg {
   background: #ffd289;
 }
+
 
 /*top-sale template*/
 #top-sale .owl-carousel .item .product a {

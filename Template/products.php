@@ -14,7 +14,7 @@
                                     <button type="submit" class="btn btn-danger form-control">Nastavi kupovinu</button>
                                 </div>
                                 <div class="col">
-                                    <button type="submit" class="btn btn-warning form-control">Dodaj u korpu</button>
+                                    <button type="submit" class="btn color-second-bg text-white form-control">Dodaj u korpu</button>
                                 </div>
                             </div>
                         </div>
@@ -23,11 +23,11 @@
                             <small><?php echo $item['brand_id']?></small>
                             <div class="d-flex">
                                 <div class="rating text-warning font-size-12">
-                                    <span class="fas fa-trophy"></span>
-                                    <span class="fas fa-trophy"></span>
-                                    <span class="fas fa-trophy"></span>
-                                    <span class="fas fa-trophy"></span>
-                                    <span class="fas fa-trophy"></span>
+                                    <span class="fas fa-trophy color-second"></span>
+                                    <span class="fas fa-trophy color-second"></span>
+                                    <span class="fas fa-trophy color-second"></span>
+                                    <span class="fas fa-trophy color-second"></span>
+                                    <span class="fas fa-trophy color-second"></span>
                                 </div>
                                 <a href="#" class="px-2 font-rale font-size-14">BEST CAMERA PHONE WINNER 2021</a>
                             </div>
