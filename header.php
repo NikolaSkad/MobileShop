@@ -55,13 +55,13 @@
                         <a class="nav-link" href="index.php">Pocetna</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#">Proizvodjaci</a>
+                        <a class="nav-link" href="./brands.php">Proizvodjaci</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="#">Kontakt</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#">O nama</a>
+                        <a class="nav-link" href="aboutus.php">O nama</a>
                       </li>
                       <?php
                       

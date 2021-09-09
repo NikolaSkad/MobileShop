@@ -1,7 +1,4 @@
 <?php
-    
-    
-
     // request method post
     if($_SERVER['REQUEST_METHOD'] == "POST"){
         if (isset($_POST['top_sale_submit'])){
